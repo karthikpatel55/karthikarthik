@@ -2,45 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container {
+        #container{
             height: 50vh;
             background-color: greenyellow;
             border-radius: 20px;
             overflow: hidden;
             position: relative;
+        
         }
         #road{
             height: 50px;
             width: 100%;
-            background-color:  brown;
-        position: absolute;
-        bottom: 0;
+            background-color: brown;
+            position: absolute;
+            bottom: 0px;
+
         }
         #dino{
             width: 50px;
             height: 50px;
-            background-color:  black;
-            position: abdolute;
+            background-color: black;
+            position: absolute;
             bottom: 50px;
             left: 20px;
             color: white;
+
         }
         #obs{
             width: 20px;
             height: 50px;
-            background-color:  red;
-            position: abdolute;
+            background-color: red;
+            position: absolute;
             bottom: 50px;
             right: 20px;
+
         }
         .obs-move{
             animation-name: moveright;
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
+
         }
         @keyframes moveright{
             from{
@@ -48,13 +53,15 @@
             }
             to{
                 right: 100%;
+            }
         }
         .jump{
             animation-name: jump;
             animation-duration: 1s;
+            animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
         }
-        @keyframes jump {
+        @keyframes jump{
             from{
                 bottom: 50px;
             }
@@ -62,15 +69,13 @@
                 bottom: 200px;
             }
         }
-    }
-        
     </style>
 </head>
 <body>
-  <div id = "container">
-    <div id = "dino" class="jump">dino</div>
-    <div id = "obs"class="obs-move">obs</div>
-    <div id = "road">road</div>
-  </div>  
+    <div id="container">
+        <div id="obs" class="obs-move">Obj</div>
+            <div id="road">Road</div>
+                <div id="dino" class="jump">Dino</div>
+    </div>
 </body>
 </html>
